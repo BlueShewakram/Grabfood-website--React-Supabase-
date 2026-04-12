@@ -927,10 +927,327 @@ h3 {
   box-shadow: 0 0 8px var(--color-primary-glow);
 }
 
-/* ── Responsive ── */
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE - TABLETS (max-width: 768px)
+   ═══════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
-  .hero { padding: 40px 0 24px; }
-  .card-grid { grid-template-columns: 1fr; }
-  .auth-card { padding: 28px; }
+  h2 { font-size: 1.4rem; }
+
+  .app-container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    padding: 32px 0 20px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .auth-card {
+    padding: 28px 22px;
+  }
+
+  .auth-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cart-panel {
+    position: static;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-user span {
+    display: none;
+  }
+
+  .nav-user {
+    padding: 6px;
+  }
+
+  .theme-switcher {
+    gap: 2px;
+    padding: 3px;
+  }
+
+  .theme-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  /* Filter chips scroll horizontally on mobile */
+  .filter-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+
+  /* Restaurant card images slightly shorter */
+  .restaurant-img-wrapper {
+    height: 170px;
+  }
+
+  .restaurant-info {
+    padding: 14px 16px 16px;
+  }
+
+  /* Menu items stacked on small screens */
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .menu-item > div:last-child {
+    align-self: flex-end;
+  }
+
+  /* Payment options */
+  .payment-option {
+    padding: 12px 14px;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .payment-option .unavailable-tag {
+    position: static;
+    margin-left: auto;
+  }
+
+  /* Success page */
+  .success-page {
+    padding: 60px 16px;
+  }
+
+  .success-icon {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  .page-header {
+    padding: 20px 0 0;
+  }
+
+  .page-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .page-header .flex {
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE - PHONES (max-width: 480px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1rem; }
+
+  .app-container {
+    padding: 0 12px;
+  }
+
+  .hero {
+    padding: 24px 0 16px;
+  }
+
+  .hero p {
+    font-size: 0.92rem;
+  }
+
+  .search-bar {
+    margin: 20px auto 0;
+  }
+
+  .search-bar input {
+    padding: 12px 16px 12px 42px;
+    font-size: 0.9rem;
+  }
+
+  /* Navbar super compact */
+  .brand-logo {
+    height: 20px;
+  }
+
+  .btn-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .btn-outline {
+    font-size: 0.82rem;
+  }
+
+  /* Auth card full width */
+  .auth-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .auth-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-group input {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .form-group label {
+    font-size: 0.82rem;
+  }
+
+  /* Cart panel compact */
+  .cart-panel {
+    padding: 18px 16px;
+    border-radius: var(--radius-md);
+  }
+
+  .cart-item {
+    padding: 10px 0;
+    font-size: 0.85rem;
+  }
+
+  /* Restaurant card */
+  .restaurant-img-wrapper {
+    height: 150px;
+  }
+
+  .restaurant-info {
+    padding: 12px 14px 14px;
+  }
+
+  .restaurant-info h3 {
+    font-size: 1rem;
+  }
+
+  .restaurant-meta {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .card-grid {
+    padding-bottom: 32px;
+  }
+
+  /* Menu items */
+  .menu-item {
+    padding: 14px;
+    margin-bottom: 8px;
+  }
+
+  .menu-item-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.95rem;
+  }
+
+  /* Checkout page */
+  .payment-option {
+    padding: 10px 12px;
+    flex-wrap: wrap;
+  }
+
+  /* Touch-friendly tap targets (minimum 44x44px for Android) */
+  button, a, .chip, .payment-option, .btn-icon {
+    min-height: 44px;
+  }
+
+  /* Make sure buttons don't overflow */
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   TOUCH DEVICE OPTIMIZATIONS
+   ═══════════════════════════════════════════════════ */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects that don't work on touch */
+  .restaurant-card:hover {
+    transform: none;
+  }
+
+  .restaurant-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+
+  .restaurant-card:hover .restaurant-img {
+    transform: none;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+
+  .btn-primary:active {
+    transform: scale(0.97);
+  }
+
+  .menu-item:hover {
+    border-color: var(--color-border);
+    background: var(--color-surface);
+    box-shadow: none;
+  }
+
+  .menu-item:active {
+    background: var(--color-surface-hover);
+  }
+
+  /* Tap highlight for Android */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 210, 106, 0.1);
+  }
 }
